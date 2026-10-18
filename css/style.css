@@ -1,0 +1,377 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Times New Roman", Times, serif;
+  line-height: 1.6;
+  background: radial-gradient(circle, aliceblue, blue);
+  color: white;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 0;
+  background-color: rgba(41, 41, 96, 0.398);
+  margin-bottom: 0;
+}
+header img {
+  max-width: 100px;
+  max-height: 100px;
+  width: 50%;
+  height: 50%;
+  object-fit: contain;
+}
+header h1 {
+  margin: 0;
+  line-height: 1.2;
+  white-space: nowrap;
+  text-shadow: 2px 2px 2px blue;
+}
+
+#navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: hsl(240, 98%, 19%);
+}
+#navbar ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
+#navbar li a {
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  color: white;
+}
+#navbar li a:hover {
+  background-color: rgba(211, 238, 247, 0.318);
+}
+.dropdown {
+  position: relative;
+}
+.dropdown:hover > a {
+  background-color: rgba(211, 238, 247, 0.318);
+}
+#navbar .dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: darkblue;
+  min-width: 160px;
+  list-style-type: none;
+  z-index: 1;
+}
+#navbar .dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown-content li a {
+  display: block;
+  text-align: left;
+}
+footer {
+  padding: 20px;
+  text-align: center;
+  background-color: darkblue;
+  margin-top: auto;
+}
+footer a {
+  color: white;
+  padding: 6px;
+  border-radius: 5px;
+  font-size: 20px;
+  display: inline-block;
+  margin-right: 10px;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+footer a:hover {
+  color: black;
+  background-color: rgba(173, 216, 230, 0.365);
+}
+
+main {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+  min-height: calc(100vh - 200px);
+}
+.hero {
+  background: linear-gradient(to bottom right, #eef0ff, #dce0ff);
+  border-radius: 10px;
+  padding: 20px 24px;
+  margin-bottom: 16px;
+  font-size: 20px;
+}
+.hero h2 {
+  color: #30356b;
+  text-shadow: none;
+}
+.hero p {
+  font-size: 14px;
+  text-align: justify;
+  margin-left: 20px;
+  color: #42476f;
+  line-height: 1.6;
+}
+.highlights {
+  background: linear-gradient(
+    to bottom right,
+    rgb(81, 81, 171),
+    rgb(154, 200, 241)
+  );
+  padding: 20px 24px;
+  border-radius: 10px;
+}
+.milestone ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap: 15px;
+}
+.milestone li {
+  background: linear-gradient(
+    to bottom right,
+    rgb(23, 23, 222),
+    rgb(84, 91, 132)
+  );
+  border-radius: 10px;
+  padding: 15px 20px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  display: block;
+}
+.milestone li:hover {
+  transform: translateY(-3px);
+}
+.highlights h3 {
+  font-size: 24px;
+  text-shadow: none;
+}
+article,
+section {
+  background: linear-gradient(
+    to bottom right,
+    rgb(45, 72, 169),
+    rgb(59, 59, 80)
+  );
+  padding: 20px 24px;
+  border-radius: 10px;
+  margin-bottom: 24px;
+}
+article h2,
+section h3 {
+  font-size: 24px;
+  text-shadow: none;
+}
+article p,
+section p {
+  font-size: 14px;
+  text-align: justify;
+  margin-left: 10px;
+}
+.stack-content ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap: 15px;
+}
+.stack-content li {
+  display: block;
+  background: linear-gradient(to right, #eef0ff, #dce0ff);
+  color: #30356b;
+  padding: 15px 20px;
+  border: 1px solid #c5cbf5;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  display: block;
+}
+.stack-content li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+table {
+  background: linear-gradient(
+    to bottom right,
+    rgb(45, 72, 169),
+    rgb(59, 59, 80)
+  );
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+th,
+td {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 12px 16px;
+  text-align: left;
+}
+th {
+  font-weight: bold;
+  background-color: rgb(3, 13, 44);
+}
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  max-width: 280px;
+  background: linear-gradient(to right, white, aliceblue);
+  border-radius: 10px;
+  padding: 10px 15px;
+}
+.card a:last-child {
+  margin-top: auto;
+}
+.card-link {
+  padding: 10px 15px;
+  text-decoration: none;
+  color: black;
+}
+.card-link span {
+  display: inline;
+  background: linear-gradient(to left, blue, aliceblue);
+  border-radius: 20px;
+  padding: 10px;
+}
+.card-link span:hover,
+.card-link a:hover {
+  background-image: none;
+  color: white;
+  background-color: rgb(164, 224, 243);
+}
+.card h3 {
+  color: darkblue;
+  min-height: 3.5rem;
+  margin-bottom: 12px;
+}
+.card img {
+  width: 100%;
+  border-radius: 6px;
+}
+.card p {
+  color: darkblue;
+}
+.pagination {
+  text-align: center;
+  margin-top: 30px;
+}
+
+form {
+  background: linear-gradient(
+    to bottom,
+    rgb(140, 140, 211),
+    rgb(203, 189, 189)
+  );
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 10px 15px;
+  max-width: 500px;
+  margin: 20px auto;
+}
+form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 6px;
+}
+button[type="submit"] {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  width: 100%;
+  padding: 6px;
+  font-weight: bold;
+  border-radius: 6px;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+button[type="submit"]:hover {
+  cursor: pointer;
+  background-color: rgba(145, 246, 212, 0.8);
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+  }
+
+  header h1 {
+    white-space: normal;
+    font-size: 22px;
+  }
+
+  #navbar ul {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  #navbar li a {
+    text-align: center;
+    padding: 10px;
+  }
+  #navbar .dropdown-content {
+    position: static;
+    width: 100%;
+    background-color: hsl(240, 98%, 14%);
+  }
+  .dropdown-content li a {
+    text-align: center;
+  }
+  main {
+    margin: 20px auto;
+    padding: 0 15px;
+  }
+  .milestone ul,
+  .stack-content ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    max-width: 100%;
+    width: 100%;
+  }
+  form {
+    width: 100%;
+    padding: 15px;
+  }
+}
